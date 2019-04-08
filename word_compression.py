@@ -3,7 +3,6 @@ def compress_word(word):
     count = 1
     # loop through the letters in the word
     for i in range(1, len(word)):
-
         if word[i - 1] != word[i]:
             compressed_word += f"{count}{word[i]}"
             count = 0
