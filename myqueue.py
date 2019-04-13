@@ -1,4 +1,4 @@
-class Queue:
+class MyQueue:
     class Node:
         def __init__(self, key):
             self.key = key
@@ -23,4 +23,14 @@ class Queue:
     def dequeue(self):
         result = self.first
         self.first = self.first.next
-        return result
+        return result.key
+
+    def __str__(self):
+        # Loop through all of the nodes and add the key to a
+        # list. return the list as a string.
+        result = [self.first.key]
+        n = self.first
+        while n.next != None:
+            result.append(n.next.key)
+            n = n.next
+        return str(result)
