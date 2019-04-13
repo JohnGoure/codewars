@@ -1,5 +1,11 @@
 class MyQueue:
-    class Node:
+    ##
+    # @brief Create a Node
+    #
+    # Keyword arguments:
+    # @param real
+    class _Node:
+        # Node stores a value and points to a connected node
         def __init__(self, key):
             self.key = key
             self.next = None
@@ -11,7 +17,9 @@ class MyQueue:
         self.first = None
 
     def queue(self, key):
-        newNode = self.Node(key)
+        if key == None:
+            return "Can not enqueue None"
+        newNode = self._Node(key)
         if self.first:
             n = self.first
             while n.next is not None:
