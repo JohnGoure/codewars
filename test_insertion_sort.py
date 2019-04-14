@@ -12,6 +12,6 @@ def test_single_item():
     mock = [1]
     assert insertion_sort.insertion_sort(mock) == mock
 
-def test_mixed_item():
+def test_mixed_items():
     mock = [1,'a']
     assert insertion_sort.insertion_sort(mock) == TypeError
