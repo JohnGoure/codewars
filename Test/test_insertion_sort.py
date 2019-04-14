@@ -14,4 +14,4 @@ def test_single_item():
 
 def test_mixed_items():
     mock = [1,'a']
-    assert insertion_sort(mock) == TypeError
+    assert insertion_sort(mock) == Exception
