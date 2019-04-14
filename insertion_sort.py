@@ -1,11 +1,10 @@
 def insertion_sort(arr):
-    for j in range(1, len(arr)):
-        key = arr[j]
-        i = j - 1
-        while i < len(arr) and arr[i] < key:
-            arr[i + 1] = arr[i]
-            i = i + 1
-        arr[i + 1] = key
+    for x in range(0, len(arr)):
+        i = x
+        while i > 0 and arr[i - 1] > arr[i]:
+            arr[i], arr[i - 1] = arr[i - 1], arr[i]
+            i -= 1
     return arr
 
-print(insertion_sort([10, 9, 8, 7, 5]))
+mock = [3, 2, 1, 7, 8, 9, 10, 6, 5, 4]
+print(insertion_sort(mock))
