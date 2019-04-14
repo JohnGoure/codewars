@@ -1,4 +1,4 @@
-from ToLowerCase import CaseDestroyer
+from Solutions.ToLowerCase import CaseDestroyer
 import random
 
 def test_all_upper():

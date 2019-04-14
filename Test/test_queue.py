@@ -1,4 +1,4 @@
-from myqueue import MyQueue
+from Datastructures.myqueue import MyQueue
 
 def test_queue_deque():
     mock_queue = MyQueue()
