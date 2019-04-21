@@ -5,3 +5,7 @@ class BubbleSort:
                 if arr[y] > arr[y+1]:
                     arr[y], arr[y + 1] = arr[y + 1], arr[y]
         return arr
+
+if __name__ == "__main__":
+    mock = BubbleSort()
+    print("Bubble sort [ 2, 3, 1 ] returns " + str(mock.sort([ 2, 3, 1 ])))
