@@ -14,3 +14,6 @@ class Stack:
 
     def peek(self):
         return self.arr[self.top]
+
+    def is_Empty(self):
+        return self.top == -1
