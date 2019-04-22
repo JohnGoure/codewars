@@ -8,16 +8,18 @@ class Stack:
         self.top += 1
 
     def pop(self):
-        if (self.is_Empty == False):
+        if (self.is_Empty() == False):
             item = self.arr[self.top]
             self.top -= 1
             return item
-        return 'Empty Stack'
+        else:
+            return 'Empty Stack'
 
     def peek(self):
-        if (self.is_Empty == False):
+        if (self.is_Empty() == False):
             return self.arr[self.top]
-        return 'Empty Stack'
+        else: 
+            return 'Empty Stack'
 
     def is_Empty(self):
         return self.top == -1
