@@ -10,4 +10,4 @@ def parity(Arr):
             arr.append(x)
     return list(arr)
 
-print(parity([1,2,3,4]))
+print(parity([1, 2, 3, 4]))
