@@ -36,5 +36,7 @@ class Deque():
 
     def last(self):
 
+    def is_empty(self):
+
     def _resize(self, c):
         old = self._arr
