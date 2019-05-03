@@ -9,15 +9,25 @@ class Deque():
         self._front = 0
 
     def add_first(self, e):
-        """Add an item to the from the queue."""
+        """Add an item to the from the deque."""
         if (self._size == len(self._arr)):
             self._resize(2 * len(self._arr))
         self._arr[(self._front - 1) % len(self._arr)] = e
         self._front -= 1
         self._size += 1
 
+    def delete_first(self):
+        """Delete the first item in the deque."""
+        if (self._size < len(self._arr) / 4):
+            self._resize(len(self._arr) / 2)
+        temp = self.first()
+        self._arr[self._front % len(self._arr)] = None
+        self._size -= 1
+        self._front += 1
+        return temp
+
     def first(self):
-        return self._arr[self._front]
+        return self._arr[self._front % len(self._arr)]
 
     def _resize(self, c):
         old = self._arr
