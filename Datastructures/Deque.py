@@ -1,6 +1,7 @@
 class Deque():
     """A queue-like data structure that supports insertion
     and deletion at both the front and the back of the queue"""
+
     def __init__(self, size=10):
         """Intialize the deque with size or default size of 10"""
         self._arr = [None] * size
