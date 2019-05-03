@@ -27,7 +27,14 @@ class Deque():
         return temp
 
     def first(self):
+        """Return the value of the first item in the deque."""
         return self._arr[self._front % len(self._arr)]
+
+    def add_last(self):
+
+    def delete_last(self):
+
+    def last(self):
 
     def _resize(self, c):
         old = self._arr
