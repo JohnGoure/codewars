@@ -6,3 +6,13 @@ def test_add_first():
     mockDeque.add_first(1)
     mockDeque.add_first(3)
     assert mockDeque.first() == 3
+
+
+def test_delete_first():
+    mockDeque = Deque()
+    mockDeque.add_first(1)
+    mockDeque.add_first(7)
+    mockDeque.add_first(9)
+    mockDeque.delete_first()
+    mockDeque.delete_first()
+    assert mockDeque.first() == 1
