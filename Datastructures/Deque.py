@@ -9,7 +9,7 @@ class Deque():
         self._front = 0
 
     def add_first(self, e):
-        """Add an item to the from the deque."""
+        """Add an item to the front the deque."""
         if (self._size == len(self._arr)):
             self._resize(2 * len(self._arr))
         self._arr[(self._front - 1) % len(self._arr)] = e
@@ -31,12 +31,13 @@ class Deque():
         return self._arr[self._front % len(self._arr)]
 
     def add_last(self):
+        """Add an item to the end of the deque."""
+    # def delete_last(self):
 
-    def delete_last(self):
-
-    def last(self):
+    # def last(self):
 
     def is_empty(self):
+        return self._size == 0
 
     def _resize(self, c):
         old = self._arr
