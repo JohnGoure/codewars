@@ -24,3 +24,8 @@ def test_add_last():
     mockDeque.add_last(2)
     mockDeque.delete_first()
     assert mockDeque.first() == 2
+
+
+def test_last():
+    mockDeque = Deque()
+    
