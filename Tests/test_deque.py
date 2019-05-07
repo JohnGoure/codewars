@@ -16,3 +16,11 @@ def test_delete_first():
     mockDeque.delete_first()
     mockDeque.delete_first()
     assert mockDeque.first() == 1
+
+
+def test_add_last():
+    mockDeque = Deque()
+    mockDeque.add_first(1)
+    mockDeque.add_last(2)
+    mockDeque.delete_first()
+    assert mockDeque.first() == 2
