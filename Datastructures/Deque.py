@@ -30,8 +30,13 @@ class Deque():
         """Return the value of the first item in the deque."""
         return self._arr[self._front % len(self._arr)]
 
-    def add_last(self):
+    def add_last(self, e):
         """Add an item to the end of the deque."""
+        if self._size == len(self._arr):
+            self._resize(2 * len(self._arr))
+        self._arr[(self._front + self._size) % len(self._arr)] = e
+        self._size += 1
+
     # def delete_last(self):
 
     # def last(self):
