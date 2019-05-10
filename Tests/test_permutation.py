@@ -1,4 +1,4 @@
-from Datastructures.Permutation import permutation
+from Solutions.Permutation import permutation
 
 
 def test_permutation():
