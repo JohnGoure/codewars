@@ -1,11 +1,6 @@
 class MyQueue:
-    ##
-    # @brief Create a Node
-    #
-    # Keyword arguments:
-    # @param real
+    """A first in first out collection."""
     class _Node:
-        # Node stores a value and points to a connected node
         def __init__(self, key):
             self.key = key
             self.next = None
@@ -17,7 +12,8 @@ class MyQueue:
         self.first = None
 
     def queue(self, key):
-        if key == None:
+        """Place an item in the queue."""
+        if key is None:
             return "Can not enqueue None"
         newNode = self._Node(key)
         if self.first:
@@ -29,16 +25,16 @@ class MyQueue:
             self.first = newNode
 
     def dequeue(self):
+        """Remove an item from the queue."""
         result = self.first
         self.first = self.first.next
         return result.key
 
     def __str__(self):
-        # Loop through all of the nodes and add the key to a
-        # list. return the list as a string.
+        """Return the stored keys."""
         result = [self.first.key]
         n = self.first
-        while n.next != None:
+        while n.next is not None:
             result.append(n.next.key)
             n = n.next
         return str(result)
