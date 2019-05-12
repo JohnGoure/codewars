@@ -1,4 +1,4 @@
-from EmptyException import Empty
+from Datastructures.EmptyException import Empty
 
 
 class _DoublyLinkedBase:

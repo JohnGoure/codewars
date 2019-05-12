@@ -1,3 +1,6 @@
+from Datastructures.EmptyException import Empty
+
+
 class Stack:
     def __init__(self):
         self.top = -1
@@ -13,13 +16,13 @@ class Stack:
             self.top -= 1
             return item
         else:
-            return 'Empty Stack'
+            raise Empty('Empty stack')
 
     def peek(self):
         if (self.is_Empty() is False):
             return self.arr[self.top]
         else:
-            return 'Empty Stack'
+            raise Empty('Empty stack')
 
     def is_Empty(self):
         return self.top == -1
