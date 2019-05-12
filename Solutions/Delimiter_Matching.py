@@ -1,5 +1,6 @@
 from Datastructures.Stack import Stack
 
+
 class Matching:
     def __init__(self):
         self.arr = Stack()
@@ -9,12 +10,18 @@ class Matching:
             if x == '{' or x == '(' or x == '[':
                 self.arr.push(x)
             elif x == '}':
+                if self.arr.is_Empty():
+                    return False
                 if self.arr.pop() != '{':
                     return False
             elif x == ')':
+                if self.arr.is_Empty():
+                    return False
                 if self.arr.pop() != '(':
                     return False
             elif x == ']':
+                if self.arr.is_Empty():
+                    return False
                 if self.arr.pop() != '[':
                     return False
 
