@@ -1,6 +1,3 @@
-import math
-
-
 def shellsort(arr):
     n = len(arr)
     gap = n // 2
