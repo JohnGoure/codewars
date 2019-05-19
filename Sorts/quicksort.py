@@ -27,6 +27,6 @@ class Quicksort:
         return i+1
 
 if __name__ == "__main__":
-    aux = [4, 2, 1, 0, 10, 12, 14, 11, 22, 65, 43, 25, 86, 91]
+    aux = [4, 2, 1, 0, 10, 12, 14, 11, 22, 65, 43, 25, 86, 91, 15, 22]
     Quicksort().sort(aux)
     print(aux)
