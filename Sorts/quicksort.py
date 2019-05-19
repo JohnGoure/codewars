@@ -1,11 +1,18 @@
+import random
+
+
 class Quicksort:
 
-    def sort(self, arr, lo, hi):
+    def sort(self, arr):
         """Sort the collection in O(NlgN) time."""
+        random.shuffle(arr)
+        self._sort(arr, 0, len(arr) - 1)
+
+    def _sort(self, arr, lo, hi):
         if lo < hi:
             pi = self._partition(arr, lo, hi)
-            self.sort(arr, lo, pi - 1)
-            self.sort(arr, pi + 1, hi)
+            self._sort(arr, lo, pi - 1)
+            self._sort(arr, pi + 1, hi)
 
     def _partition(self, arr, lo, hi):
         """Place the pivot element at its correct position in the sorted array."""
@@ -20,5 +27,6 @@ class Quicksort:
         return i+1
 
 if __name__ == "__main__":
-    aux = [4, 2, 1, 0]
-    Quicksort().sort(aux, 0, len(aux) - 1)
+    aux = [4, 2, 1, 0, 10, 12, 14, 11, 22, 65, 43, 25, 86, 91]
+    Quicksort().sort(aux)
+    print(aux)
