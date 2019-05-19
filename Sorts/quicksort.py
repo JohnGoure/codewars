@@ -3,3 +3,4 @@ def quicksort(arr, lo, hi):
 
 
 def _partition(arr, lo, hi):
+    raise NotImplementedError("Needs to be implemented")
