@@ -1,8 +1,8 @@
-def reverseString(word: list):
+def reverseString(characters: list):
     """Reverse a list of characters in place."""
-    for x in range(len(word) // 2):
-        word[x], word[-1 - x] = word[-1 - x], word[x]
-    return word
+    for x in range(len(characters) // 2):
+        characters[x], characters[-1 - x] = characters[-1 - x], characters[x]
+    return characters
 
-word = ['a', 'c', 'b', 'q', 'z', 't']
+word = ['a', 'b', 'c', 'd', 'e']
 print(reverseString(word))
