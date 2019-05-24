@@ -2,6 +2,7 @@ def autocomplete(input_, dictionary):
     suggestions = []
     input_ = ''.join(letters for letters in input_ if letters.isalpha())
     for word in dictionary:
+        breakpoint()
         if len(suggestions) == 5:
             return suggestions
         if word[:len(input_)].lower() == input_.lower():
